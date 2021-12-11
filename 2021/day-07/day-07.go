@@ -50,6 +50,7 @@ func partTwo() int {
 	var pos []int
 	min := 999
 	max := -1
+	s := 0
 	for _, val := range vals{
 		v, _ := strconv.Atoi(val)
 		if v < min {
@@ -59,6 +60,7 @@ func partTwo() int {
 			max = v
 		}
 		pos = append(pos, v)
+		s += v
 	}
 	minSum := -1
 	distCache := make(map[int]int)
